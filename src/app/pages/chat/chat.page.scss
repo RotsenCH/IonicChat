@@ -1,0 +1,84 @@
+/* Tu estilo original */
+.message-input {
+    width: 100%;
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 6px;
+    background: #520000;
+    resize: none;
+    margin-top: 0px;
+    --padding-start: 8px;
+}
+
+.message {
+    padding: 10px !important;
+    border-radius: 10px !important;
+    margin-bottom: 4px !important;
+    white-space: pre-wrap;
+}
+
+.my-message {
+    background: rgb(245, 81, 81);
+    color: #000000;
+}
+
+.other-message {
+    background: var(--ion-color-secondary);
+    color: #fff;
+}
+
+.time {
+    color: #dfdfdf;
+    float: right;
+    font-size: small;
+}
+
+/* Estilos ajustados */
+body {
+    font-family: "Keania One", sans-serif;
+}
+
+ion-content {
+    --ion-background-color: linear-gradient(#0505a0, #2095cf);
+    font-weight: bold;
+    text-shadow: 0 0 50px black;
+    --ion-font-family: "Keania One", sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    text-shadow: 0 0 50px black;
+}
+.message-input textarea {
+    color: red;
+  }
+  
+ion-item {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-color: black;
+    color: rgb(199, 31, 31);
+    border: 3px solid black;
+}
+
+ion-button {
+    --background: rgb(199, 31, 31);
+    --border-color: black;
+    --border-radius: 10px;
+    --border-color: black;
+    font-weight: bold;
+}
+
+.header {
+    margin-top: 100px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.header .sub-title {
+    color: rgb(199, 31, 31);
+    font-size: 0.9rem;
+}
+
+.header .title {
+    font-size: 2rem;
+}

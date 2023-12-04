@@ -1,0 +1,38 @@
+<!-- profile.page.html -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Perfil</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="signOut()">
+        <ion-icon name="log-out" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img [src]="user?.photoURL" />
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>{{ user?.username }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-center">
+      <ion-button expand="full" (click)="editProfile = !editProfile">Editar perfil</ion-button>
+      <ion-button expand="full" routerLink="/chat">Ingresar al chat</ion-button> <!-- Botón para entrar al chat -->
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="editProfile">
+    <ion-card-header>
+      <ion-card-title>Editar perfil</ion-card-title>
+    </ion-card-header>
+    <ion-card-content horizontal="center" class="ion-text-center">
+      <ion-input placeholder="Nombre de usuario" [(ngModel)]="user.username"></ion-input>
+      <ion-button (click)="updateUsername(user.username)">Guardar nombre de usuario</ion-button>
+      <br>
+      <input type="file" (change)="uploadImage($event)" />
+      <ion-button (click)="editProfile = !editProfile">Guardar</ion-button>
+      <ion-button (click)="editProfile = !editProfile">Cancelar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
