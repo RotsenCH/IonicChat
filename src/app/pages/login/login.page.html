@@ -17,10 +17,10 @@
       ></ion-input>
     </ion-item>
     <div *ngIf="credentialForm.get('email')?.errors?.['required'] ?? false" class="errors">
-      <span>Email is required</span>
+      <span>Se requiere un email</span>
     </div>
     <div *ngIf="credentialForm.get('email')?.errors?.['email'] ?? false" class="errors">
-      <span>Email is invalid</span>
+      <span>El Email no es válido</span>
     </div>
 
 
@@ -33,16 +33,16 @@
       ></ion-input>
     </ion-item>
     <div *ngIf="credentialForm.get('password')?.errors?.['required'] ?? false" class="errors">
-      <span>Password is required</span>
+      <span>Se requiere una contraseña válida</span>
     </div>
     <div *ngIf="credentialForm.get('password')?.errors?.['minlength'] ?? false" class="errors">
-      <span>Password needs to be 6 characters</span>
+      <span>La contraseña debe tener minimo 6 caracteres</span>
     </div>
   </form>
 
   <ion-fab horizontal="center">
-    <ion-button (click)="signUp()" expand="full">Sign up</ion-button>
-    <ion-button (click)="signIn()" expand="full" color="secondary">Sign in</ion-button>
+    <ion-button (click)="signUp()" expand="full">Registrarse</ion-button>
+    <ion-button (click)="signIn()" expand="full" color="secondary">Ingresar</ion-button>
   </ion-fab>
 
 
